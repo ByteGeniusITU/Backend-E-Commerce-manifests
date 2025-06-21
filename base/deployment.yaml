@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-ecommerce-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend-ecommerce-app
+  template:
+    metadata:
+      name: backend-ecommerce
+      labels:
+        app: backend-ecommerce-app
+    spec:
+      containers:
+        - name: backend-ecommerce
+          ports:
+            - containerPort: 8010

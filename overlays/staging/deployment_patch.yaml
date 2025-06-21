@@ -1,0 +1,10 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-ecommerce-deployment
+spec:
+  template:
+    spec:
+      containers:
+        - name: backend-ecommerce
+          image: bytegenius/backend-ecommerce:v0.1-staging
